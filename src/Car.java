@@ -1,5 +1,5 @@
 /********************************************************************
- * Programmer:	sveinson
+ * Programmer:	Amy Mann
  * Class:  CS30S
  *
  * Assignment: AxQy
@@ -20,32 +20,34 @@ public class Car {
     
     //*** Instance Variables ***
     
+        private int litrePer100km = 0;         // this is the litres per 100km
+        private int nFuelInTank = 0;           // this is the amount of fuel in the tank
+        
     //*** Constructors ***
     
     /*****************************************
     * Description: default constructor
     * 
-    * Interface:
-    * 
-    * @param        each parameter of the method should be listed with an @param
-    * @param        parametername description of parameter
-    * 
-    * @return       any return value will be noted here
     * ****************************************/
         public Car(){
-            
+            this.litrePer100km = 0;        // sets value of litrePer100km to zero
+            this.nFuelInTank = 0;          // sets value of nFuelInTank to zero
         }
     /*****************************************
-    * Description: intialized constructor
+    * Description: initialized constructor
     * 
     * Interface:
     * 
-    * @param        each parameter of the method should be listed with an @param
-    * @param        parametername description of parameter
+    * @param        litrePer100km : integer, the amount of litres per 100km traveled
+    * @param        nFuelInTank : integer, the amount of fuel in the tank
     * 
     * @return       any return value will be noted here
     * ****************************************/
-    
+        public Car(int litrePer100km, int nFuelInTank){
+            
+            this.litrePer100km = litrePer100km;
+            this.nFuelInTank = nFuelInTank;
+        }
     //*** Getters ***
     
     //*** Setters ***
