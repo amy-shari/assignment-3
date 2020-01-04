@@ -22,7 +22,6 @@ public class Car {
     
         private int litrePer100km = 0;         // this is the litres per 100km
         private int nFuelInTank = 0;           // this is the amount of fuel in the tank
-        private int distanceToEmptyTank = 0;   // distance until tank is empty
         
     //*** Constructors ***
     
@@ -56,6 +55,9 @@ public class Car {
         * 
         * ****************************************/
             public int getFuelLevel(){
+                
+                // fuel used = Distance / 100 * litres per 100km
+                
                 return this.nFuelInTank;
             } 
             
@@ -65,7 +67,10 @@ public class Car {
         * @return litrePer100km : int, gets litres per 100km
         * 
         * ****************************************/
-            public int geKPL(){
+            public int getKPL(){
+                
+                // kpl = litres * 100 / km
+                
                 return this.litrePer100km;
             } 
             
@@ -76,7 +81,11 @@ public class Car {
         * 
         * ****************************************/
             public int getDistance(){
-                return this.distanceToEmptyTank;
+                int distanceToEmptyTank = 0;   // distance until tank is empty
+
+                distanceToEmptyTank = this.nFuelInTank / this.litrePer100km * 100;
+                
+                return distanceToEmptyTank;
             }     
         
     //*** Setters ***
