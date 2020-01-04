@@ -20,7 +20,7 @@ public class Car {
     
     //*** Instance Variables ***
     
-        private int litrePer100km = 0;         // this is the litres per 100km
+        private double litrePer100km = 0.0;         // this is the litres per 100km
         private int nFuelInTank = 0;           // this is the amount of fuel in the tank
         
     //*** Constructors ***
@@ -64,10 +64,10 @@ public class Car {
         /*****************************************
         * Description: gets the litre per 100km
         * 
-        * @return litrePer100km : int, gets litres per 100km
+        * @return litrePer100km : double, gets litres per 100km
         * 
         * ****************************************/
-            public int getKPL(){
+            public double getKPL(){
                 
                 // kpl = litres * 100 / km
                 
@@ -77,17 +77,39 @@ public class Car {
         /*****************************************
         * Description: gets the litre per 100km
         * 
-        * @return distanceToEmptyTank : int, gets the amount of litres until tank is empty
+        * @return distanceToEmptyTank : double, gets the amount of litres until tank is empty
         * 
         * ****************************************/
-            public int getDistance(){
-                int distanceToEmptyTank = 0;   // distance until tank is empty
+            public double getDistance(){
+                double distanceToEmptyTank = 0.0;   // distance until tank is empty
 
                 distanceToEmptyTank = this.nFuelInTank / this.litrePer100km * 100;
                 
                 return distanceToEmptyTank;
-            }     
+            }  // end getDistance   
         
     //*** Setters ***
     
+        /*****************************************
+        * Description:  sets the amount of fuel in tank
+        * 
+        * Interface:
+        * 
+        * @param        nFuelInTanks: int, n amount of fuel in tank
+        *****************************************/
+            public void gasUp(int nFuelInTank){
+                this.nFuelInTank = nFuelInTank;
+            } // end gasUp 
+            
+        /*****************************************
+        * Description:  sets the KPL
+        * 
+        * Interface:
+        * 
+        * @param        litrePer100km: double, the fuel efficiency measure in KPL
+        *****************************************/
+            public void setKPL(double litrePer100km){
+                this.litrePer100km = litrePer100km;
+            } // end gasUp    
+            
 } // end of public class
