@@ -22,6 +22,7 @@ public class Car {
     
         private int litrePer100km = 0;         // this is the litres per 100km
         private int nFuelInTank = 0;           // this is the amount of fuel in the tank
+        private int distanceToEmptyTank = 0;   // distance until tank is empty
         
     //*** Constructors ***
     
@@ -41,15 +42,43 @@ public class Car {
     * @param        litrePer100km : integer, the amount of litres per 100km traveled
     * @param        nFuelInTank : integer, the amount of fuel in the tank
     * 
-    * @return       any return value will be noted here
     * ****************************************/
         public Car(int litrePer100km, int nFuelInTank){
-            
             this.litrePer100km = litrePer100km;
             this.nFuelInTank = nFuelInTank;
         }
     //*** Getters ***
     
+       /*****************************************
+        * Description: gets the amount of fuel in tank
+        * 
+        * @return nFuelInTank : int, amount of fuel in tank
+        * 
+        * ****************************************/
+            public int getFuelLevel(){
+                return this.nFuelInTank;
+            } 
+            
+        /*****************************************
+        * Description: gets the litre per 100km
+        * 
+        * @return litrePer100km : int, gets litres per 100km
+        * 
+        * ****************************************/
+            public int geKPL(){
+                return this.litrePer100km;
+            } 
+            
+        /*****************************************
+        * Description: gets the litre per 100km
+        * 
+        * @return distanceToEmptyTank : int, gets the amount of litres until tank is empty
+        * 
+        * ****************************************/
+            public int getDistance(){
+                return this.distanceToEmptyTank;
+            }     
+        
     //*** Setters ***
     
 } // end of public class
