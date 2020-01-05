@@ -2,14 +2,10 @@
  * Programmer:	Amy Mann
  * Class:  CS30S
  *
- * Assignment: AxQy
+ * Assignment: Assignment 3
  *
- * Description: Class file for the car class
- *	each car object has a fuel efficiency measured in litres per 100 km
- *	each car object has a fuel property, how much gas is in the tank 
- *	measured in litres.
- *	You are to determine what methods are needed and implement  them
- *	in an efficient manner.
+ * Description: determines fuel economy, fuel level, and distance it can travel 
+ *              of a vehicle
 **************************************************************************/
 
 
