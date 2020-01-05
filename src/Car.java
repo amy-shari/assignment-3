@@ -54,10 +54,7 @@ public class Car {
         * @return nFuelInTank : int, amount of fuel in tank
         * 
         * ****************************************/
-            public int getFuelLevel(){
-                
-                // fuel used = Distance / 100 * litres per 100km
-                
+            public int getFuelLevel(){                
                 return this.nFuelInTank;
             } 
             
@@ -67,10 +64,7 @@ public class Car {
         * @return litrePer100km : double, gets litres per 100km
         * 
         * ****************************************/
-            public double getKPL(){
-                
-                // kpl = litres * 100 / km
-                
+            public double getKPL(){                
                 return this.litrePer100km;
             } 
             
@@ -86,7 +80,7 @@ public class Car {
                 distanceToEmptyTank = this.nFuelInTank / this.litrePer100km * 100;
                 
                 return distanceToEmptyTank;
-            }  // end getDistance   
+            }  // end getDistance
         
     //*** Setters ***
     
@@ -95,7 +89,7 @@ public class Car {
         * 
         * Interface:
         * 
-        * @param        nFuelInTanks: int, n amount of fuel in tank
+        * @param        nFuelInTank: int, n amount of fuel in tank
         *****************************************/
             public void gasUp(int nFuelInTank){
                 this.nFuelInTank = nFuelInTank;
@@ -110,6 +104,19 @@ public class Car {
         *****************************************/
             public void setKPL(double litrePer100km){
                 this.litrePer100km = litrePer100km;
-            } // end gasUp    
+            } // end gasUp  
+            
+        /*****************************************
+        * Description:  sets fuel level when you drive
+        * 
+        * Interface:
+        * 
+        * @param        distanceDriven: int, the amount of distance driven
+        *****************************************/
+            public void drive(int distanceDriven){
+                int fuelUsed = 0;           // the amount of fuel used
+                fuelUsed = (int) (distanceDriven / 100 * litrePer100km);  // equation to calculate fuel used
+                nFuelInTank = nFuelInTank - fuelUsed;       // calculates the updated fuel in tank
+            } // end gasUp     
             
 } // end of public class
